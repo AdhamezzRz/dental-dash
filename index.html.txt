@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <img src="clinic-logo.png" alt="Clinic Logo" id="logo">
+        <h1>Dental Dash</h1>
+        <p>Enter your name to start the game:</p>
+        <input type="text" id="playerName" placeholder="Your Name">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="dashboard">
+            <p id="currentPlayer"></p>
+            <p>Score: <span id="score">0</span></p>
+            <button onclick="showLeaderboard()">Leaderboard</button>
+        </div>
+    </div>
+
+    <div id="leaderboard" style="display: none;">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboardList"></ul>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
